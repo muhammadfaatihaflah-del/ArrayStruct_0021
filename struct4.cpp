@@ -30,7 +30,7 @@ int main()
     getline (cin, mhs[i].alamat.kota );
     cout << "Isikan data usia : ";
     cin >> mhs[i].umur;
-    
+    cin.ignore();
     }
 
     cout << "Data Mahasiswa" << endl;
