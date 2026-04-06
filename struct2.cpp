@@ -19,4 +19,9 @@ int main()
     cin >> mhs.alamat;
     cout << "Isikan data usia : ";
     cin >> mhs.umur;
+
+    cout << "data mahasiswa "  << endl;
+    cout << "nama : "  <<mhs.nama << endl;
+    cout << "alamat : "  <<mhs.alamat << endl;
+    cout << "umur : "  <<mhs.umur << endl;
 }
