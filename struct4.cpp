@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+
 struct alamatdetail
 {
     string desa;
@@ -17,20 +18,27 @@ struct mahasiswa
 int main()
 {
     // deklarasi variabel struct
-    mahasiswa mhs;
+    mahasiswa mhs[3];
     //mengisi data
+    for (int i = 0 ; i <= 2; i++)
+    {
     cout << "isikan data nama : ";
-    cin >> mhs.nama;
+    getline (cin, mhs[i].nama );
     cout << "Isikan data desa : ";
-    cin >> mhs.alamat.desa;
+    getline (cin, mhs[i].alamat.desa );
     cout << "Isikan data kota : ";
-    cin >> mhs.alamat.kota;
+    getline (cin, mhs[i].alamat.kota );
     cout << "Isikan data usia : ";
-    cin >> mhs.umur;
+    cin >> mhs[i].umur;
+    
+    }
 
-    cout << "data mahasiswa "  << endl;
-    cout << "nama : "  <<mhs.nama << endl;
-    cout << "desa : "  <<mhs.alamat.desa << endl;
-    cout << "kota : "  <<mhs.alamat.kota << endl;
-    cout << "usia : "  <<mhs.umur << endl;
+    cout << "Data Mahasiswa" << endl;
+    for(int i = 0; i < 2; i++)
+    {
+        cout << "Nama : " << mhs[i].nama << endl;
+        cout << "Kota : " << mhs[i].alamat.kota << endl;
+        cout << "Desa : " << mhs[i].alamat.desa << endl;
+        cout << "Usia : " << mhs[i].umur << endl;
+    }
 }
